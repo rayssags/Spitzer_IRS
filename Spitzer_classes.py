@@ -6,7 +6,7 @@ class CUBISM_spectra:
 def poly_wcs_ds9_region(path, wcs):
     from regions import read_ds9
     from astropy.wcs import WCS
-    regions = read_ds9(file, errors='warn')
+    regions = read_ds9(path, errors='warn')
     regions = list(map(lambda x: x.to_pixel, regions))
     return regions 
 
